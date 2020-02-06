@@ -35,7 +35,6 @@ class BatchNormTest(TransformTest):
                     logabsdet_ref += torch.sum(torch.log(transform.weight))
                 self.assert_tensor_is_good(outputs_ref, [batch_size, features])
                 self.assert_tensor_is_good(logabsdet_ref, [batch_size])
-                print(outputs, outputs_ref)
                 self.assertEqual(outputs, outputs_ref)
                 self.assertEqual(logabsdet, logabsdet_ref)
 
