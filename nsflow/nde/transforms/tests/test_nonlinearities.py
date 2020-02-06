@@ -51,6 +51,7 @@ class TestPiecewiseCDF(TransformTest):
                 self.assertEqual(outputs, inputs)
 
     def test_forward_inverse_are_consistent(self):
+        torch.manual_seed(0)
         for transform in self.transforms:
             with self.subTest(transform=transform):
                 inputs = torch.rand(self.batch_size, *self.shape)
@@ -65,7 +66,7 @@ class TestUnconstrainedPiecewiseCDF(TransformTest):
                       nl.PiecewiseQuadraticCDF(shape, tails='linear'),
                       nl.PiecewiseCubicCDF(shape, tails='linear'),
                       nl.PiecewiseRationalQuadraticCDF(shape, tails='linear')]
-
+        torch.manual_seed(0)
         for transform in transforms:
             with self.subTest(transform=transform):
                 inputs = 3 * torch.randn(batch_size, *shape)
