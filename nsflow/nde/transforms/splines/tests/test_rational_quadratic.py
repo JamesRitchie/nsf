@@ -1,7 +1,7 @@
 import torch
 import torchtestcase
 
-from nde.transforms import splines
+from nsflow.nde.transforms import splines
 
 class RationalQuadraticSplineTest(torchtestcase.TorchTestCase):
     def test_forward_inverse_are_consistent(self):
