@@ -1,8 +1,8 @@
 import torch
 import unittest
 
-from nde.transforms.transform_test import TransformTest
-from nde import transforms
+from nsflow.nde.transforms.tests.test_transform import TransformTest
+from nsflow.nde import transforms
 
 
 class SqueezeTransformTest(TransformTest):

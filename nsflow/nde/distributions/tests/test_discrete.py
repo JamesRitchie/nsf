@@ -3,7 +3,7 @@
 import torch
 import torchtestcase
 import unittest
-from nde.distributions import discrete
+from nsflow.nde.distributions import discrete
 
 
 class ConditionalIndependentBernoulliTest(torchtestcase.TorchTestCase):

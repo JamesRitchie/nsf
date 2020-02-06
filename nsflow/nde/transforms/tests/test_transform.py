@@ -1,7 +1,7 @@
 import torch
 import torchtestcase
 
-from nde.transforms import base
+from nsflow.nde.transforms import base
 
 
 class TransformTest(torchtestcase.TorchTestCase):

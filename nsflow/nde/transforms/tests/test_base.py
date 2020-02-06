@@ -4,9 +4,9 @@ import unittest
 import numpy as np
 import torch
 
-from nde.transforms import base
-from nde.transforms import standard
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import base
+from nsflow.nde.transforms import standard
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 class CompositeTransformTest(TransformTest):
 

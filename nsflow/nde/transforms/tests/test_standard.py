@@ -4,8 +4,8 @@ import numpy as np
 import torch
 import unittest
 
-from nde.transforms import standard
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import standard
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
 class IdentityTransformTest(TransformTest):

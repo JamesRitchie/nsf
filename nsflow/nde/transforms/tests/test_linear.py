@@ -5,11 +5,11 @@ import unittest
 
 from unittest.mock import MagicMock
 
-import utils
+from nsflow import utils
 
-from nde.transforms import linear
-from nde.transforms.transform_test import TransformTest
-from nde.transforms.linear import Linear
+from nsflow.nde.transforms import linear
+from nsflow.nde.transforms.tests.test_transform import TransformTest
+from nsflow.nde.transforms.linear import Linear
 
 
 class LinearTest(TransformTest):

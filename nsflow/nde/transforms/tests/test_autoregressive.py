@@ -3,8 +3,8 @@
 import torch
 import unittest
 
-from nde.transforms import autoregressive
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import autoregressive
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
 class MaskedAffineAutoregressiveTransformTest(TransformTest):

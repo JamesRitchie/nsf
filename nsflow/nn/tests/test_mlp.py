@@ -4,7 +4,7 @@ import torch
 import torchtestcase
 import unittest
 
-from nn import mlp
+from nsflow.nn import mlp
 
 
 class MLPTest(torchtestcase.TorchTestCase):

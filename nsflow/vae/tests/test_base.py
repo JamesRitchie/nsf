@@ -4,8 +4,8 @@ import torch
 import torchtestcase
 import unittest
 
-from nde import distributions
-from vae import base
+from nsflow.nde import distributions
+from nsflow.vae import base
 
 
 class VariationalAutoencoderTest(torchtestcase.TorchTestCase):

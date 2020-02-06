@@ -1,23 +1,22 @@
+"""Tests for the LU linear transforms."""
+
 import torch
 import unittest
 
-import utils
+from nsflow import utils
 
-from nde.transforms import svd
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import lu
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
-class SVDLinearTest(TransformTest):
+class LULinearTest(TransformTest):
 
     def setUp(self):
         self.features = 3
-        self.transform = svd.SVDLinear(features=self.features, num_householder=4)
-        self.transform.bias.data = torch.randn(self.features)  # Just so bias isn't zero.
+        self.transform = lu.LULinear(features=self.features)
 
-        diagonal = torch.diag(torch.exp(self.transform.log_diagonal))
-        orthogonal_1 = self.transform.orthogonal_1.matrix()
-        orthogonal_2 = self.transform.orthogonal_2.matrix()
-        self.weight = orthogonal_1 @ diagonal @ orthogonal_2
+        lower, upper = self.transform._create_lower_upper()
+        self.weight = lower @ upper
         self.weight_inverse = torch.inverse(self.weight)
         self.logabsdet = utils.logabsdet(self.weight)
 

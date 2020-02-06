@@ -4,7 +4,7 @@ import torch
 import torchtestcase
 import unittest
 
-from utils import torchutils
+from nsflow.utils import torchutils
 
 
 class TorchUtilsTest(torchtestcase.TorchTestCase):

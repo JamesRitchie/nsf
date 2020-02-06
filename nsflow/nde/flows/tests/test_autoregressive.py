@@ -4,7 +4,7 @@ import torch
 import torchtestcase
 import unittest
 
-from nde.flows import autoregressive as ar
+from nsflow.nde.flows import autoregressive as ar
 
 
 class MaskedAutoregressiveFlowTest(torchtestcase.TorchTestCase):

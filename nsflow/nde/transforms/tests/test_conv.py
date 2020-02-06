@@ -1,8 +1,8 @@
 import torch
 import unittest
 
-from nde import transforms
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde import transforms
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
 class OneByOneConvolutionTest(TransformTest):

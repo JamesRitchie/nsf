@@ -3,8 +3,8 @@
 import torch
 import unittest
 
-from nde.transforms import permutations
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import permutations
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
 class PermutationTest(TransformTest):

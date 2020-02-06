@@ -3,9 +3,9 @@
 import torch
 import torchtestcase
 import unittest
-from nde import transforms
-from nde import distributions
-from nde.flows import base
+from nsflow.nde import transforms
+from nsflow.nde import distributions
+from nsflow.nde.flows import base
 
 
 class FlowTest(torchtestcase.TorchTestCase):

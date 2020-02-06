@@ -3,7 +3,7 @@
 import torch
 import torchtestcase
 import unittest
-from nde.distributions import normal
+from nsflow.nde.distributions import normal
 
 
 class StandardNormalTest(torchtestcase.TorchTestCase):

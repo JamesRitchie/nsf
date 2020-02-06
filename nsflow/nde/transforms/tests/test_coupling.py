@@ -6,11 +6,11 @@ import unittest
 
 from torch import nn
 
-import nn as nn_
-import utils
+from nsflow import nn as nn_
+from nsflow import utils
 
-from nde.transforms import coupling
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import coupling
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 def create_coupling_transform(cls, shape, **kwargs):
     if len(shape) == 1:

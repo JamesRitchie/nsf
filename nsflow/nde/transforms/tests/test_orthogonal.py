@@ -3,10 +3,10 @@
 import torch
 import unittest
 
-import utils
+from nsflow import utils
 
-from nde.transforms import orthogonal
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import orthogonal
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
 class HouseholderSequenceTest(TransformTest):

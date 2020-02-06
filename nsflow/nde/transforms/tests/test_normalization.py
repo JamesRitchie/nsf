@@ -3,9 +3,9 @@
 import torch
 import unittest
 
-from nde.transforms import base
-from nde.transforms import normalization as norm
-from nde.transforms.transform_test import TransformTest
+from nsflow.nde.transforms import base
+from nsflow.nde.transforms import normalization as norm
+from nsflow.nde.transforms.tests.test_transform import TransformTest
 
 
 class BatchNormTest(TransformTest):
