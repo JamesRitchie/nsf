@@ -9,6 +9,7 @@ from nsflow.nde.transforms import made
 
 class ShapeTest(torchtestcase.TorchTestCase):
 
+    @unittest.skip('Not implemented yet.')
     def test_conditional(self):
         features = 100
         hidden_features = 200
