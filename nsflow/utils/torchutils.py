@@ -42,12 +42,15 @@ def merge_leading_dims(x, num_dims):
 
 def repeat_rows(x, num_reps):
     """Each row of tensor `x` is repeated `num_reps` times along leading dimension."""
-    if not utils.is_positive_int(num_reps):
-        raise TypeError('Number of repetitions must be a positive integer.')
-    shape = x.shape
-    x = x.unsqueeze(1)
-    x = x.expand(shape[0], num_reps, *shape[1:])
-    return merge_leading_dims(x, num_dims=2)
+    if type(x) == list:
+        return [repeat_rows(a, num_reps) for a in x]
+    else:
+        if not utils.is_positive_int(num_reps):
+            raise TypeError('Number of repetitions must be a positive integer.')
+        shape = x.shape
+        x = x.unsqueeze(1)
+        x = x.expand(shape[0], num_reps, *shape[1:])
+        return merge_leading_dims(x, num_dims=2)
 
 
 def tensor2numpy(x):
