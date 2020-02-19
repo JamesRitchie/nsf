@@ -196,7 +196,7 @@ class MaskedResidualBlock(nn.Module):
         temps = self.activation(temps)
         temps = self.dropout(temps)
         temps = self.linear_layers[1](temps)
-        if context is not None:
+        if hasattr(self, 'context_layer'):
             temps = F.glu(
                 torch.cat((temps, self.context_layer(context)), dim=1),
                 dim=1
@@ -271,7 +271,7 @@ class MADE(nn.Module):
 
     def forward(self, inputs, context=None):
         outputs = self.initial_layer(inputs)
-        if context is not None:
+        if hasattr(self, 'context_later'):
             outputs += self.context_layer(context)
         for block in self.blocks:
             outputs = block(outputs, context)
